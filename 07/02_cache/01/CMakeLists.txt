@@ -15,6 +15,7 @@ target_link_libraries(main PUBLIC OpenMP::OpenMP_CXX)
 
 find_package(benchmark REQUIRED)
 target_link_libraries(main PUBLIC benchmark::benchmark)
+target_link_libraries(main PUBLIC benchmark::benchmark_main)
 
 if (MSVC)
     target_compile_options(main PUBLIC /fp:fast /arch:AVX)
